@@ -23,53 +23,48 @@ function loadCrafting(){
 
 function loadCombat(){
 	//Combat//
-	$('#tree').html($("#combatView-template").html());
-	chivalryTree.render($('#chivalryTree'));
-	chivalryTree.traverseBF(initializeNode);
-	$('#chivalryImage').attr('src',chivalry.imageSrc);
-	
-	chainmailArmorsTree.render($('#chainmailArmorsTree'));
-	chainmailArmorsTree.traverseBF(initializeNode);
-	$('#chainmailArmorsImage').attr('src',chainmailArmors.imageSrc);
-	scaleArmorsTree.render($('#scaleArmorsTree'));
-	scaleArmorsTree.traverseBF(initializeNode);
-	$('#scaleArmorsImage').attr('src',scaleArmors.imageSrc);
-	plateArmorsTree.render($('#plateArmorsTree'));
-	plateArmorsTree.traverseBF(initializeNode);
-	$('#plateArmorsImage').attr('src',plateArmors.imageSrc);
-	
-	warriorTree.render($('#warriorTree'));
-	warriorTree.traverseBF(initializeNode);
-	$('#warriorImage').attr('src',warrior.imageSrc);
-
-	equipmentMaintainTree.render($('#equipmentMaintainTree'));
+	$('#tree').html($("#combatView-template").html());	
+	cavalryTree.render($('#cavalryTree'));
+	cavalryTree.traverseBF(initializeNode);
+	$('#cavalryImage').attr('src',cavalry.imageSrc);
+	militiaTree.render($('#militiaTree'));
+	militiaTree.traverseBF(initializeNode);
+	$('#militiaImage').attr('src',militia.imageSrc);
+	footmanTree.render($('#footmanTree'));	
+	footmanTree.traverseBF(initializeNode);
+	$('#footmanImage').attr('src',footman.imageSrc);
+	slingerTree.render($('#slingerTree'));
+	slingerTree.traverseBF(initializeNode);
+	$('#slingerImage').attr('src',slinger.imageSrc);
+	assaulterTree.render($('#assaulterTree'));
+	assaulterTree.traverseBF(initializeNode);
+	$('#assaulterImage').attr('src',assaulter.imageSrc);	
+	unitAndFormationTree.render($('#unitAndFormationTree'));
+	unitAndFormationTree.traverseBF(initializeNode);
+	$('#unitAndFormationImage').attr('src',unitAndFormation.imageSrc);
+	equipmentMaintainTree.render($('#unitAndFormationTree'));
 	equipmentMaintainTree.traverseBF(initializeNode);
 	$('#equipmentMaintainImage').attr('src',equipmentMaintain.imageSrc);
 	battleSurvivalTree.render($('#battleSurvivalTree'));
 	battleSurvivalTree.traverseBF(initializeNode);
 	$('#battleSurvivalImage').attr('src',battleSurvival.imageSrc);
-	drillTree.render($('#drillTree'));
-	drillTree.traverseBF(initializeNode);
-	$('#drillImage').attr('src',drill.imageSrc);
+	demolitionTree.render($('#battleSurvivalTree'));
+	demolitionTree.traverseBF(initializeNode);
+	$('#demolitionImage').attr('src',demolition.imageSrc);
 	
-	var newWidth = parseInt($('#chivalryTree > ul > li').css("width")) + parseInt($('#chivalryTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#chivalryTree').css('width',newWidth);
-	newWidth = parseInt($('#warriorTree > ul > li').css("width")) + parseInt($('#warriorTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#warriorTree').css('width',newWidth);
-	newWidth = parseInt($('#chainmailArmorsTree > ul > li').css("width")) + parseInt($('#chainmailArmorsTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#chainmailArmorsTree').css('width',newWidth);
-	newWidth = parseInt($('#scaleArmorsTree > ul > li').css("width")) + parseInt($('#scaleArmorsTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#scaleArmorsTree').css('width',newWidth);
-	newWidth = parseInt($('#plateArmorsImage > ul > li').css("width")) + parseInt($('#plateArmorsImage > ul > li').css("padding-left")) * 2 + 1;
-	$('#plateArmorsImage').css('width',newWidth);
-	newWidth = parseInt($('#equipmentMaintainTree > ul > li').css("width")) + parseInt($('#equipmentMaintainTree > ul > li').css("padding-left")) * 2 + 1;
+	//center the divs
+	var newWidth = parseInt($('#cavalryTree > ul > li').css("width")) + parseInt($('#cavalryTree > ul > li').css("padding-left")) * 2 + 1;
+	$('#cavalryTree').css('width',newWidth);
+	var newWidth = parseInt($('#militiaTree > ul > li').css("width")) + parseInt($('#militiaTree > ul > li').css("padding-left")) * 2 + 1;
+	$('#militiaTree').css('width',newWidth);
+	var newWidth = parseInt($('#footmanTree > ul > li').css("width")) + parseInt($('#footmanTree > ul > li').css("padding-left")) * 2 + 1;
+	$('#footmanTree').css('width',newWidth);
+	var newWidth = parseInt($('#assaulterTree > ul > li').css("width")) + parseInt($('#assaulterTree > ul > li').css("padding-left")) * 2 + 1;
+	$('#assaulterTree').css('width',newWidth);
+	var newWidth = parseInt($('#equipmentMaintainTree > ul > li').css("width")) + parseInt($('#equipmentMaintainTree > ul > li').css("padding-left")) * 2 + 1;
 	$('#equipmentMaintainTree').css('width',newWidth);
-	newWidth = parseInt($('#battleSurvivalTree > ul > li').css("width")) + parseInt($('#battleSurvivalTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#battleSurvivalTree').css('width',newWidth);
-	newWidth = parseInt($('#drillTree > ul > li').css("width")) + parseInt($('#drillTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#drillTree').css('width',newWidth);
-	
-
+	var newWidth = parseInt($('#demolitionTree > ul > li').css("width")) + parseInt($('#demolitionTree > ul > li').css("padding-left")) * 2 + 1;
+	$('#demolitionTree').css('width',newWidth);
 }
 
 function loadMinor(){
@@ -100,7 +95,6 @@ function loadMinor(){
 	artsTree.render($('#artsTree'));
 	artsTree.traverseBF(initializeNode);
 	$('#artsImage').attr('src',arts.imageSrc);
-			
 }
 
 function handlePopup(errText){
@@ -632,14 +626,14 @@ function changeLang(lang){
 			artisanTree.traverseBF(repaintTreeText_callback);
 			naturesLoreTree.traverseBF(repaintTreeText_callback);
 			huntingTree.traverseBF(repaintTreeText_callback);
-			chivalryTree.traverseBF(repaintTreeText_callback);
-			warriorTree.traverseBF(repaintTreeText_callback);
-			chainmailArmorsTree.traverseBF(repaintTreeText_callback);
-			scaleArmorsTree.traverseBF(repaintTreeText_callback);
-			plateArmorsTree.traverseBF(repaintTreeText_callback);
+			cavalryTree.traverseBF(repaintTreeText_callback);
+			militiaTree.traverseBF(repaintTreeText_callback);
+			footmanTree.traverseBF(repaintTreeText_callback);
+			slingerTree.traverseBF(repaintTreeText_callback);
+			assaulterTree.traverseBF(repaintTreeText_callback);
 			equipmentMaintainTree.traverseBF(repaintTreeText_callback);
 			battleSurvivalTree.traverseBF(repaintTreeText_callback);
-			drillTree.traverseBF(repaintTreeText_callback);
+			demolitionTree.traverseBF(repaintTreeText_callback);
 			movementTree.traverseBF(repaintTreeText_callback);
 			swimmingTree.traverseBF(repaintTreeText_callback);
 			generalActionsTree.traverseBF(repaintTreeText_callback);
@@ -656,18 +650,18 @@ function changeLang(lang){
 			
 			
 			$("#summaryTable").find("tr:gt(0)").remove();
-			
-			manageSummaryTable(artisanTree._root);
+			//This is the summary table that appears at the bottom of the page.
+			manageSummaryTable(artisanTree._root);;
 			manageSummaryTable(naturesLoreTree._root);;
 			manageSummaryTable(huntingTree._root);
-			manageSummaryTable(chivalryTree._root);
-			manageSummaryTable(warriorTree._root);
-			manageSummaryTable(chainmailArmorsTree._root);
-			manageSummaryTable(scaleArmorsTree._root);
-			manageSummaryTable(plateArmorsTree._root);
+			manageSummaryTable(cavalryTree._root);
+			manageSummaryTable(militiaTree._root);
+			manageSummaryTable(footmanTree._root);
+			manageSummaryTable(slingerTree._root);
+			manageSummaryTable(assaulterTree._root);
+			manageSummaryTable(demolitionTree._root);
 			manageSummaryTable(equipmentMaintainTree._root);
 			manageSummaryTable(battleSurvivalTree._root);
-			manageSummaryTable(drillTree._root);
 			manageSummaryTable(movementTree._root);
 			manageSummaryTable(generalActionsTree._root);
 			manageSummaryTable(swimmingTree._root);

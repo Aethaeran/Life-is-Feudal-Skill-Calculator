@@ -1000,8 +1000,6 @@ var piety = {
 var mentoring = {
 				idName: "mentoring", 
 				displayName: "Ausbilden", 
-				children: [], 
-				parentNode:null, 
 				allText:"Die Punktzahl bestimmt die maximale Fertigkeitsstufe, die Lehrlingen gegeben werden kann ",
 				zeroText:"Du kannst Fertigkeiten der Stufe 1 lehren",
 				thirtyText:"Du kannst Fertigkeiten Stufe 2 und Grundfertigkeiten lehren",

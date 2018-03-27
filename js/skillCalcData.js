@@ -453,55 +453,233 @@ var tailoring = {
 				disabledImageSrc:"images/Tailoring_u.png",
 				value:0
 			};
-
-
-//Combat//
-//Chivalry Tree
-var chivalry = {
-				idName: "chivalry", 
-				displayName: "Chivalry", 
-				allText:"Maximum quality of militia weapons that can be effectively used.<br><br>Maximum quality of one-handed axes and maces that can be effectively used.<br><br>Maximum quality of padded armor that can be effectively used.",
-				zeroText:"Can equip padded armors.<br><br>Can use one-handed axes and maces.<br><br>Can use militia weapons (pitchforks, staves, pickaxes, shovels and any other handheld tools).<br><br>Can use Flee! ability (speed goes up for a short time, while the ability to use any weapons is lost).", 
-				thirtyText:"3x lower armor encumbrance.<br><br>Militia weapons attacks become twice as fast.<br><br>One-handed axe and mace attacks become twice as fast.<br><br>Can perform Special Attack on someone knocked down.", 
-				sixtyText:"Can equip regular padded armors.<br><br>Artisan's Strike combo (thrust - overhead - overhead - left slash or thrust - overhead - overhead - right slash)<br><br>Skullsplitter! combo (right slash - left slash - right slash - overhead or left slash - right slash - left slash - overhead)<br><br>This combo has no special effects.<br><br>Can perform Special Attack after stunning your opponent.", 
-				ninetyText:"Can equip heavy padded armors.<br><br>Thrusting attacks with militia weapons cannot be parried.<br><br>Knock-Knock! combo (thrust - overhead - overhead - overhead)<br><br>This combo ends with a Power Strike effect.<br><br>Can perform Special Attack while under a Power strike effect.", 
-				hundredText:"Can equip royal padded armors.<br>Trickmove.",
+//Combat
+var cavalry = {
+				idName: "cavalry", 
+				displayName: "Cavalry",  
+				allText:"",
+				zeroText:"Can use hand-and-a-half swords.<br><br>Can use one-handed weapons while mounted.", 
+				thirtyText:"Can equip novice chainmail armors.", 
+				sixtyText:"Can ride normal warhorse.", 
+				ninetyText:"A lower chance of falling out of the saddle in battle.", 
+				hundredText:"Trickmove", 
 				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Axe_And_Mace_Mastery.png",
-				disabledImageSrc:"images/Axe_And_Mace_Mastery_u.png",
+				treeName:"cavalryTree",
+				imageSrc:"images/Cavalry.png",
+				disabledImageSrc:"images/Cavalry_u.png",
 				value:0
 			};
-var spearMastery = {
-				idName: "spearMastery", 
-				displayName: "Spear Mastery", 
-				allText:"Maximum quality of spears that can be effectively used.",
-				zeroText:"Can use spears.", 
-				thirtyText:"Pike and spear attacks become twice as fast.", 
-				sixtyText:"Can perform 'Wall of pikes' attack. It is a special thrusting pike attack that makes you immobile, deals massive damage to horses and always stops them.", 
-				ninetyText:"A greater chance of unsaddling a rider using overhead attacks", 
-				hundredText:"Trickmove",
+var knight = {
+				idName: "knight", 
+				displayName: "Knight",  
+				allText:"",
+				zeroText:"Can use Knight Sword", 
+				thirtyText:"Can equip regular chainmail armors", 
+				sixtyText:"Can ride spirited and hardy warhorses<br><br>Gives a chance that enemy pike will slide off without harming the horse or the rider", 
+				ninetyText:"Iron grip - no one will be able to throw you out of the saddle for a short period of time", 
+				hundredText:"Trickmove", 
 				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Spear_Mastery.png",
-				disabledImageSrc:"images/Spear_Mastery_u.png",
+				treeName:"cavalryTree",
+				imageSrc:"images/Knight.png",
+				disabledImageSrc:"images/Knight_u.png",
 				value:0
 			};
-var poleaxesMastery = {
-				idName: "poleaxesMastery", 
-				displayName: "Poleaxes Mastery", 
-				allText:"Maximum quality of pole weapons that can be effecively used.",
-				zeroText:"Can use pole weapons.", 
-				thirtyText:"Pole weapon attacks become twice as fast.<br><br>Can perform Special Attack on someone knocked down.", 
-				sixtyText:"Can perform a 'Pounce' attack.<br><br>Can perform Special Attack after a successful parry.<br><br>Can perform Special Attack after recovering from a stun.<br><br>Can perform Special Attack after a successfull attack against your opponent.<br><br>Can perform Special Attack after hitting a horse.", 
-				ninetyText:"A greater chance of unsaddling a rider using overhead attacks.<br><br><br><br>Can perform Special Attack while under a Power Strike effect.<br><br>Can perform Special Attack after stunning your opponent.", 
-				hundredText:"Trickmove",
+var lancer = {
+				idName: "lancer", 
+				displayName: "Lancer",  
+				allText:"",
+				zeroText:"Can use lances while mounted.", 
+				thirtyText:"Can equip heavy chainmail armors<br><br>Lance become easier to aim<br><br>", 
+				sixtyText:"Can ride heavy warhorses<br><br>Can couch lance longer", 
+				ninetyText:"Can equip royal chainmail armors<br><br>Unstoppable - a heavy horse that gallops for longer than 5 seconds becomes impervious to everything except a Wall of Pikes or Defensive Fence and gains the ability to knock subsequent players down without losing speed. The effect ceases when the horse is no longer galloping", 
+				hundredText:"Earth rumbles around a galloping heavy warhorse<br><br>Can ride royal warhorses.", 
 				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Poleaxes_Mastery.png",
-				disabledImageSrc:"images/Poleaxes_Mastery_u.png",
+				treeName:"cavalryTree",
+				imageSrc:"images/Lancer.png",
+				disabledImageSrc:"images/Lancer_u.png",
 				value:0
 			};
+var militia = {
+				idName: "militia", 
+				displayName: "Militia", 
+				allText:"",
+				zeroText:"Allows unarmed attacks and parry strikes from pole weapons.<br><br>Can use militia weapons (pitchforks, staves, pickaxes, shovels and any other handheld tools).<br><br>Can use Flee! ability (speed goes up for a short time, while the ability to use any weapon is lost).", 
+				thirtyText:"Can equip novice padded armors", 
+				sixtyText:"Chance to cause knockdown if unarmed attack hits head.<br><br>Can perform Special Attack after stunning your opponent.", 
+				ninetyText:"Disarm - chance to take opponent's polearm after a successful unarmed parry.<br><br>Can perform Special Attack after a successful parry.", 
+				hundredText:"Trickmove ", 
+				skillType:"Combat",
+				treeName:"militiaTree",
+				imageSrc:"images/Militia.png",
+				disabledImageSrc:"images/Militia_u.png",
+				value:0
+			};
+var spearman = {
+				idName: "spearman", 
+				displayName: "Spearman", 
+				allText:"",
+				zeroText:"Can use spears and pikes", 
+				thirtyText:"Can equip regular padded armors", 
+				sixtyText:"Can perform 'Wall of pikes' attack - a special thrusting pike attack that makes you immobile, deals massive damage to horses and always stops them.", 
+				ninetyText:"Ability to use spears with shields (except Bec de Corbin)<br><br>Can perform Special Attack on someone knocked down", 
+				hundredText:"Trickmove", 
+				skillType:"Combat",
+				treeName:"militiaTree",
+				imageSrc:"images/Spearman.png",
+				disabledImageSrc:"images/Spearman_u.png",
+				value:0
+			};
+var guard = {
+				idName: "guard", 
+				displayName: "Guard", 
+				allText:"",
+				zeroText:"Can use pole weapons", 
+				thirtyText:"Can equip heavy padded armors", 
+				sixtyText:"Can perform Special Attack after a successful parry against your opponent<br><br>Can perform Special Attack after hitting a horse", 
+				ninetyText:"Can equip royal padded armors<br><br>A greater chance of unsaddling a rider using overhead attacks", 
+				hundredText:"Trickmove ", 
+				skillType:"Combat",
+				treeName:"militiaTree",
+				imageSrc:"images/Guard.png",
+				disabledImageSrc:"images/Guard_u.png",
+				value:0
+			};
+var footman = {
+				idName: "footman", 
+				displayName: "Footman", 
+				allText:"",
+				zeroText:"Can use one-handed axes and primitive shields", 
+				thirtyText:"Can equip novice scale armors<br><br>Can use buckler shields", 
+				sixtyText:"Can use targe shields<br><br>Skullsplitter! combo (right slash- left slash - overhead or left slash - right slash - overhead). This combo ends with a Power Strike effect", 
+				ninetyText:"Knock-Knock! combo (overhead - overhead - overhead). This combo ends with a Power Strike effect", 
+				hundredText:"Trickmove", 
+				skillType:"Combat",
+				treeName:"footmanTree",
+				imageSrc:"images/Footman.png",
+				disabledImageSrc:"images/Footman_u.png",
+				value:0
+			};
+var swordsman = {
+				idName: "swordsman", 
+				displayName: "Swordsman", 
+				allText:"",
+				zeroText:"Can use one-handed blade weapons", 
+				thirtyText:"Can equip regular scale armors<br><br>Can use heater shields<br><br>Can perform Special Attack after a successful block", 
+				sixtyText:"Can use kite shields. Can perform a Shield bash Flurry of Blows! combo (right slash - left slash - thrust or left slash - right slash - thrust). This combo ends with a Power Strike effect<br><br>Can perform Special Attack after a successful block against your opponent<br><br>Can perform Special Attack on someone knocked down", 
+				ninetyText:"Can sprint while blocking<br><br>Thousand Cuts! combo (right slash - left slash - right slash or left slash - right slash - left slash). This combo has a chance of inducing a bleeding wound. Can be used by hand-and-half sword.<br><br> Can perform Special Attack after drawing a weapon from your belt.", 
+				hundredText:"Trickmove", 
+				skillType:"Combat",
+				treeName:"footmanTree",
+				imageSrc:"images/Swordsman.png",
+				disabledImageSrc:"images/Swordsman_u.png",
+				value:0
+			};
+var huscarl = {
+				idName: "huscarl", 
+				displayName: "Huscarl",
+				allText:"",
+				zeroText:"Can use one-handed piercing weapons and maces", 
+				thirtyText:"Can equip heavy scale armors<br><br>Can use heavy targe shields<br><br>Can perform Special Attack after a successful parry", 
+				sixtyText:"Can use tower shields<br><br>Point of Vulnerability! combo (overhead- left slash - right slash or overhead - right slash -left slash). This combo ends with a Power Strike effect<br><br>Can perform Special Attack after stunning your opponent", 
+				ninetyText:"Can equip royal scale armors<br><br>Another Hole! combo (overhead - overhead - overhead). This combo ends with a Power Strike effect.", 
+				hundredText:"Trickmove", 
+				skillType:"Combat",
+				treeName:"footmanTree",
+				imageSrc:"images/Huscarl.png",
+				disabledImageSrc:"images/Huscarl_u.png",
+				value:0
+			};
+var slinger = {
+				idName: "slinger", 
+				displayName: "Slinger", 
+				allText:"",
+				zeroText:"Can use a sling.", 
+				thirtyText:"Can equip novice leather armors. <br><br>Can use throwing knives.", 
+				sixtyText:"Can use throwing axes and javelin.", 
+				ninetyText:"Can throw naphtha pots.", 
+				hundredText:"Can throw firework pots.", 
+				skillType:"Combat",
+				treeName:"slingerTree",
+				imageSrc:"images/Slinger.png",
+				disabledImageSrc:"images/Slinger_u.png",
+				value:0
+			};
+var archer = {
+				idName: "archer", 
+				displayName: "Archer", 
+				allText:"",
+				zeroText:"Can use simple bows and light crossbows", 
+				thirtyText:"Higher reload speed, better aiming<br><br>Can equip regular leather armors", 
+				sixtyText:"Can use short bows and composite bows<br><br>Can place Arrowstand - Shortens the reload time when the player is standing nearby<br><br>Stopping Power - The next crossbow shot will stun the enemy for 1 second", 
+				ninetyText:"Arrow to the Knee! The next arrow will slow the enemy down by 10%. If arrow hits the leg, the enemy will be slowed down by 50%", 
+				hundredText:"Can use Firework Arrows", 
+				skillType:"Combat",
+				treeName:"slingerTree",
+				imageSrc:"images/Archer.png",
+				disabledImageSrc:"images/Archer_u.png",
+				value:0
+			};
+var ranger = {
+				idName: "ranger", 
+				displayName: "Ranger", 
+				allText:"",
+				zeroText:"Can use arbalest", 
+				thirtyText:"Higher reload speed, better aiming<br><br>Can equip heavy leather armors<br><br>Can use pavise for cover and then return it to inventory", 
+				sixtyText:"Can use longbow and heavy crossbow<br><br>Can deploy a Defensive Fence - If horses gallop into it, they will suffer damage or perish<br><br>Piercing bolt - The next crossbow shot can hit up three enemies if they stand behind each other", 
+				ninetyText:"Can equip royal leather armors<br><br>Volly - fire up to 10 arrows in a rapid succession on a targeted area", 
+				hundredText:"Can use Firework Bolts", 
+				skillType:"Combat",
+				treeName:"slingerTree",
+				imageSrc:"images/Ranger.png",
+				disabledImageSrc:"images/Ranger_u.png",
+				value:0
+			};
+var assaulter = {
+				idName: "assaulter", 
+				displayName: "Assaulter", 
+				allText:"",
+				zeroText:"Can use two-handed blade weapons", 
+				thirtyText:"Can equip novice plate armors<br><br>Can perform Special Attack after a successful parry", 
+				sixtyText:"Power Overwhelming! combo (right slash - left slash - thrust or left slash - right slash - thrust). This combo ends with a Power Strike effect<br><br>Can perform Special Attack after a successful parry against your opponent", 
+				ninetyText:"Dismember! combo (left slash - right slash - left slash or right slash - left slash - right slash). This combo ends with a Power Strike effect<br><br>Can perform Special Attack after drawing a weapon from your back", 
+				hundredText:"Trickmove", 
+				skillType:"Combat",
+				treeName:"assaulterTree",
+				imageSrc:"images/Assaulter.png",
+				disabledImageSrc:"images/Assaulter_u.png",
+				value:0
+			};
+var vanguard = {
+				idName: "vanguard", 
+				displayName: "Vanguard", 
+				allText:"",
+				zeroText:"Can use two-handed axes and mauls", 
+				thirtyText:"Can equip regular plate armors<br><br>Can perform Special Attack on someone knocked down<br><br>Can perform Special Attack after stunning your opponent", 
+				sixtyText:"Can perform a Pounce attack<br><br>Execution! combo (left slash- right slash - overhead or right slash - left slash- overhead slash). This combo has a chance of inducing a wound. If your strike becomes blocked by a shield, shield will suffer serious damage<br><br>Crunchy! combo (right slash - left slash - thrust or left slash - right slash - thrust). This combo has a chance of inflicting a fracture", 
+				ninetyText:"Kneel before me! combo (right slash - left slash - overhead or left slash - right slash - overhead). This combo has a chance of knocking down the opponent<br><br>Can perform Special Attack after a successful parry", 
+				hundredText:"Trickmove", 
+				skillType:"Combat",
+				treeName:"assaulterTree",
+				imageSrc:"images/Vanguard.png",
+				disabledImageSrc:"images/Vanguard_u.png",
+				value:0
+			};
+var berserker = {
+				idName: "berserker", 
+				displayName: "Berserker", 
+				allText:"",
+				zeroText:"Taunt (verbal) - A few well-chosen words about your enemy's mother (Strength increased). ", 
+				thirtyText:"Can equip fullplate armors.<br><br>'Coward!' - Targeted enemy gets great speed increase, but also a chance to stumble and falldown. Trembling hands (harder to hit with range weapons)", 
+				sixtyText:"Arghhhhhh! - attempt to remove all slow and poison effects on self", 
+				ninetyText:"Can equip royal fullplate armors<br><br>You are mine! - targeted enemy becomes more vulnerable and your speed slightly increased", 
+				hundredText:"Proper Taunt with animation",
+				skillType:"Combat",
+				treeName:"assaulterTree",
+				imageSrc:"images/Berserker.png",
+				disabledImageSrc:"images/Berserker_u.png",
+				value:0
+			};
+//Independent combat skills
 var unitAndFormation = {
 				idName: "unitAndFormation", 
 				displayName: "Unit And Formation", 
@@ -512,287 +690,11 @@ var unitAndFormation = {
 				ninetyText:"Can issue 'Move!' command which provides movement bonus to all unit members in range", 
 				hundredText:"Formation zone color is different",
 				skillType:"Combat",
-				treeName:"chivalryTree",
+				treeName:"unitAndFormationTree",
 				imageSrc:"images/Unit_Formation.png",
 				disabledImageSrc:"images/Unit_Formation_u.png",
 				value:0
 			};
-var mountedFightingMastery = {
-				idName: "mountedFightingMastery", 
-				displayName: "Mounted Fighting Mastery", 
-				allText:"Maximum quality of cavalry weapons that can be effectively used.<br><br>A chance to remain in the saddle when a horse rears up.",
-				zeroText:"Can use one-handed weapons while mounted.<br><br>Can ride Warhorses.", 
-				thirtyText:"Cavalry attacks become twice as fast.<br><br>Can ride Hardy Warhorses.", 
-				sixtyText:"A lower chance of falling out of saddle in battle.<br><br>Can ride Spirited Warhorses.", 
-				ninetyText:"'Iron grip' - no one will be able to throw you out of the saddle for a short period of time", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Mounted_Fighting_Mastery.png",
-				disabledImageSrc:"images/Mounted_Fighting_Mastery_u.png",
-				value:0
-			};
-var lancing = {
-				idName: "lancing", 
-				displayName: "Lancing", 
-				allText:"Maximum quality of lances that can be effectively used.",
-				zeroText:"Can use lances while mounted.", 
-				thirtyText:"Lance attacks become twice as fast.", 
-				sixtyText:"Lance become easier to aim.", 
-				ninetyText:"Can couch lance longer.", 
-				hundredText:"an use decorated lances.",
-				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Lancing.png",
-				disabledImageSrc:"images/Lancing_u.png",
-				value:0
-			};
-var heavyHorseHandling = {
-				idName: "heavyHorseHandling", 
-				displayName: "Heavy Horse Handling", 
-				allText:"Maximum quality of heavy warhorses that can be effectively used.",
-				zeroText:"Can ride heavy warhorses.", 
-				thirtyText:"Can gallop on a heavy warhorse.", 
-				sixtyText:"Gives a chance that enemy pikes will slide off without harming the horse or the rider.", 
-				ninetyText:"A heavy horse that gallops for longer than 5 seconds becomes impervious to everything except Wall of Pikes or Defensive Fence and gains the ability to knock subsequant players down without loosing speed.<br><br>The effect ceases when the horse is no longer galloping", 
-				hundredText:"Earth rumbles around a galloping heavy warhorse.<br><br>Can ride royal warhorses.",
-				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Heavy_Horse_Handling.png",
-				disabledImageSrc:"images/Heavy_Horse_Handling_u.png",
-				value:0
-			};
-var bladesMastery = {
-				idName: "bladesMastery", 
-				displayName: "Blades Mastery", 
-				allText:"Maximum quality of one-handed blades that can be effecively used.",
-				zeroText:"Can use one-handed blade weapons.", 
-				thirtyText:"One-handed blade attacks become twice as fast.<br><br>Can perform Special Attack after a successful block.<br><br>Can perform Special Attack on someone knocked down.", 
-				sixtyText:"	Thousand Cuts! combo (right slash - left slash - right slash - thrust or left slash - right slash - left slash - thrust)<br><br>This combo has a chance of inducing a bleeding wound.<br><br>Can perform Special Attack after drawing a weapon from your belt.<br><br>Can perform Special Attack immediately after recovering from a stun.<br><br>Can perform Special Attack after a successful block against your opponent.", 
-				ninetyText:"Flurry of Blows! combo (right slash - thrust - left slash - overhead or left slash - thrust - right slash - overhead).<br><br>This combo ends with a Power Strike effect.<br><br>Can perform Special Attack while under a Power Strike effect.<br><br>Can perform Special Attack after stunning your opponent.", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/1H_Blade_Mastery.png",
-				disabledImageSrc:"images/1H_Blade_Mastery_u.png",
-				value:0
-			};
-var shieldMastery = {
-				idName: "shieldMastery", 
-				displayName: "Shield Mastery", 
-				allText:"Shield durability loss after blocking a blow.",
-				zeroText:"Can equip shields and use them to block attacks.", 
-				thirtyText:"Shield durability loss caused by a successful block is reduced.", 
-				sixtyText:"Can perform a Shield bash", 
-				ninetyText:"Can sprint while blocking.", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Shield_Mastery.png",
-				disabledImageSrc:"images/Shield_Mastery_u.png",
-				value:0
-			};
-var piercingMastery = {
-				idName: "piercingMastery", 
-				displayName: "Piercing Mastery", 
-				allText:"Maximum quality of one-handed piercing weapons that can be effecively used.",
-				zeroText:"Can use one-handed piercing weapons.", 
-				thirtyText:"One-handed piercing weapons attacks become twice as fast.<br><br>Can perform Special Attack on someone knocked down.", 
-				sixtyText:"Point of Vulnerability! combo (thrust - overhead - overhead - left slash or thrust - overhead - overhead - right slash)<br><br>This combo have no special effects.<br><br>Can perform Special Attack after stunning your opponent.", 
-				ninetyText:"Another Hole! combo (overhead - right slash - left slash - overhead or overhead - left slash - right slash - overhead)<br><br>This combo ends with a Power Strike effect.<br><br>Can perform Special Attack while under a Power Strike effect.", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"chivalryTree",
-				imageSrc:"images/Piercing_Mastery.png",
-				disabledImageSrc:"images/Piercing_Mastery_u.png",
-				value:0
-			};
-
-//Indepedant Tree
-var chainmailArmors = {
-				idName: "chainmailArmors", 
-				displayName: "Chainmail Armors", 
-				allText:"Maximum quality of armor that can be effectively used.",
-				zeroText:"Can equip novice chainmail armors.", 
-				thirtyText:"3x lower armor encumbrance.", 
-				sixtyText:"Can equip regular chainmail armors.", 
-				ninetyText:"Can equip veteran chainmail armors.", 
-				hundredText:"Can equip royal chainmail armors.",
-				skillType:"Combat",
-				treeName:"chainmailArmorsTree",
-				imageSrc:"images/Chain_Mail_Armor.png",
-				disabledImageSrc:"images/Chain_Mail_Armor_u.png",
-				value:0
-			};
-var scaleArmors = {
-				idName: "scaleArmors", 
-				displayName: "Scale Armors", 
-				allText:"Maximum quality of armor that can be effecively used.",
-				zeroText:"Can equip novice scale armors.", 
-				thirtyText:"3x lower armor encumbrance.", 
-				sixtyText:"Can equip regular scale armors.", 
-				ninetyText:"Can equip veteran scale armors.", 
-				hundredText:"Can equip royal scale armors.",
-				skillType:"Combat",
-				treeName:"scaleArmorsTree",
-				imageSrc:"images/Scale_Armors.png",
-				disabledImageSrc:"images/Scale_Armors_u.png",
-				value:0
-			};
-var plateArmors = {
-				idName: "plateArmors", 
-				displayName: "Plate Armors", 
-				allText:"Maximum quality of armor that can be effecively used.",
-				zeroText:"Can equip novice plate armors.", 
-				thirtyText:"3x lower armor encumbrance.", 
-				sixtyText:"Can equip regular plate armors.", 
-				ninetyText:"Can equip veteran fullplate armors.", 
-				hundredText:"Can equip royal fullplate armors.",
-				skillType:"Combat",
-				treeName:"plateArmorsTree",
-				imageSrc:"images/Full_Plate_Armors.png",
-				disabledImageSrc:"images/Full_Plate_Armors_u.png",
-				value:0
-			};
-
-//Warrior Tree
-var warrior = {
-				idName: "warrior", 
-				displayName: "Warrior", 
-				allText:"Maximum damage that can be inflicted with unarmed attacks.<br><br>Maximum quality of throwing weapons that can be effectively used.<br><br>Maximum quality of leather armor that can be effectively used.",
-				zeroText:"Allows to attack unarmed and parry strikes from pole weapons.<br><br>Can use a sling.<br><br>Can equip novice leather armors.", 
-				thirtyText:"3x lower armor encumbrance.<br><br>Can use throwing knives.<br><br>Unarmed attacks and parrying strikes from pole weapons become twice as fast.<br><br>Can perform Special Attack after a successful parry.", 
-				sixtyText:"Can equip regular leather armors.<br><br>Can use throwing axes and javelins.<br><br>Disarm - after a successful parry, your opponent's weapon may end up in your inventory.<br><br>Can perform Special Attack immediately after recovering from a stun.<br><br>Can perform Special Attack while under a Power Strike effect.<br><br>Can perform Special Attack after stunning your opponent.", 
-				ninetyText:"Can equip heavy leather armors.<br><br>Can throw naphtha grenades.<br><br>Knockout! - chance to cause knockdown if unarmed attack hits head.", 
-				hundredText:"Can equip royal leather armors.<br><br>Can throw firework charges.<br><br>Trickmove",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/Unarmed_Fight.png",
-				disabledImageSrc:"images/Unarmed_Fight_u.png",
-				value:0
-			};
-var demolition = {
-				idName: "demolition", 
-				displayName: "Demolition", 
-				allText:"Effectiveness of demolition-related actions.",
-				zeroText:"Can use torches as a siege melee weapon.", 
-				thirtyText:"More effective use of torches.", 
-				sixtyText:"", 
-				ninetyText:"Can man trebuchet", 
-				hundredText:"Can shoot with cows (just for fun)",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/Demolition.png",
-				disabledImageSrc:"images/Demolition_u.png",
-				value:0
-			};
-var twoHandedAxes = {
-				idName: "twoHandedAxes", 
-				displayName: "Two-handed Axes Mastery", 
-				allText:"Maximum quality of two-handed axes that can be effecively used.",
-				zeroText:"Can use two-handed axes.", 
-				thirtyText:"Two-handed axe attacks become twice as fast.", 
-				sixtyText:"Can execute a Pounce attack.", 
-				ninetyText:"Execution! combo (left slash - right slash - overhead - right slash or right slash - left slash - overhead - left slash)<br><br>This combo has a chance of inducting a wound.<br><br>If your strike becomes blocked by a shield, shield will suffer serious damage.", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/2H_Axes_Mastery.png",
-				disabledImageSrc:"images/2H_Axes_Mastery_u.png",
-				value:0
-			};
-var twoHandedBlades = {
-				idName: "twoHandedBlades", 
-				displayName: "Two-handed Blades Mastery", 
-				allText:"Maximum quality of two-handed blade weapons that can be effecively used.",
-				zeroText:"Can use two-handed blade weapons.", 
-				thirtyText:"Two-handed sword attacks become twice as fast.<br><br>Can perform Special Attack immediately after recovering from a stun.<br><br>Can perform Special Attack after a successful parry against your opponent.<br><br>Can perform Special Attack on someone knocked down.", 
-				sixtyText:"Power Overwhelming! combo (thrust - right slash - left slash - overhead or thrust - left slash - right slash - overhead)<br><br>This combo have no special effects.<br><br>Can perform Special Attack after a successful parry.", 
-				ninetyText:"Dismember! combo (left slash - right slash - left slash - right slash or right slash - left slash - right slash - left slash)<br><br>This combo ends with Power Strike effect.<br><br>Can perform Special Attack while under a Power Strike effect.<br><br>Can perform Special Attack after stunning your opponent.", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/2H_Blade_Mastery.png",
-				disabledImageSrc:"images/2H_Blade_Mastery_u.png",
-				value:0
-			};
-var twoHandedBlunt = {
-				idName: "twoHandedBlunt", 
-				displayName: "Two-handed Blunt Mastery", 
-				allText:"Maximum quality of two-handed blunt weapons that can be effecively used.",
-				zeroText:"Can use two-handed blunt weapons.", 
-				thirtyText:"Two-handed blunt weapons attacks become twice as fast.<br><br>Can perform Special Attack on someone knocked down.", 
-				sixtyText:"Crunchy! combo (thrust - right slash - left slash - overhead or thrust - left slash - right slash - overhead)<br><br>This combo has a chance of inflicting a fracture.<br><br>Can perform Special Attack after a successful parry.", 
-				ninetyText:"Kneel before me! combo (right slash - left slash - overhead - overhead or left slash - right slash - overhead - ovearhead)<br><br>This combo has a chance of knocking down the opponent.<br><br>Can perform Special Attack while under a Power Strike effect.<br><br>Can perform Special Attack after stunning your opponent.", 
-				hundredText:"Trickmove",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/2H_Blunt_Mastery.png",
-				disabledImageSrc:"images/2H_Blunt_Mastery_u.png",
-				value:0
-			};
-var warCries = {
-				idName: "warCries", 
-				displayName: "War Cries", 
-				allText:"Power of war cries",
-				zeroText:"Taunt (verbal) - A few well-chosen words about your enemy's mother (Strength increased)", 
-				thirtyText:"'Coward!' - Targeted enemy gets great speed increase, but also a chance to stumble and falldown.<br><br>Trembling hands (harder to hit with ranged weapons)", 
-				sixtyText:"Arghhhhhh! - Attempts to remove all slow and poison effects on self.", 
-				ninetyText:"You are mine! - Targeted enemy becomes more vulnerable and your speed slightly increased.", 
-				hundredText:"Proper taunt with animation.",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/War_Cries.png",
-				disabledImageSrc:"images/War_Cries_u.png",
-				value:0
-			};
-var crossbows = {
-				idName: "crossbows", 
-				displayName: "Crossbows Mastery", 
-				allText:"Maximum quality of crossbows that can be effectively used.",
-				zeroText:"Can use crossbows.", 
-				thirtyText:"Higher reload speed, better aiming", 
-				sixtyText:"Stopping Power - The next crossbow shot will stun the enemy for 1 second", 
-				ninetyText:"Piercing Bolt - The next crossbow shot can hit up to three enemies if they stand behind each other", 
-				hundredText:"Can use Firework Bolts",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/Crossbows_Mastery.png",
-				disabledImageSrc:"images/Crossbows_Mastery_u.png",
-				value:0
-			};
-var bows = {
-				idName: "bows", 
-				displayName: "Bows Mastery", 
-				allText:"Maximum quality of bows that can be effectively used.",
-				zeroText:"Can use bows.", 
-				thirtyText:"Higher reload speed, better aiming.", 
-				sixtyText:"Arrow to the knee! - The next arrow will slow the enemy down by 10%.<br><br>If the arrow hits the leg, the enemy will be slowed down by 50%.", 
-				ninetyText:"Volley - Fire up to 10 arrows in a rapid succession on a targeted area.", 
-				hundredText:"Can use Firework Arrows.",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/Bows_Mastery.png",
-				disabledImageSrc:"images/Bows_Mastery_u.png",
-				value:0
-			};
-var combatPrep = {
-				idName: "combatPrep", 
-				displayName: "Combat Preparation", 
-				allText:"Speed of combat preparation performing",
-				zeroText:"Arrowstand - Shortens the reload time when the player is standing nearby", 
-				thirtyText:"Can use a pavise for cover and then to return it to the inventory", 
-				sixtyText:"Can deploy a Defensive Fence - If horses gallop into it, they will suffer damage or perish", 
-				ninetyText:"Can set up a small field tent (5 binding points)", 
-				hundredText:"Can set up a decorated field tent (5 binding points)",
-				skillType:"Combat",
-				treeName:"warriorTree",
-				imageSrc:"images/Combat_Preparation.png",
-				disabledImageSrc:"images/Combat_Preparation_u.png",
-				value:0
-			};
-
-//Independant 2 Tree
 var equipmentMaintain = {
 				idName: "equipmentMaintain", 
 				displayName: "Equipment Maintain", 
@@ -823,23 +725,21 @@ var battleSurvival = {
 				disabledImageSrc:"images/First_Aid_u.png",
 				value:0
 			};
-var drill = {
-				idName: "drill", 
-				displayName: "Drill", 
-				allText:"Max skill level that can be given to trainees",
-				zeroText:"Can drill tier 1 skills", 
-				thirtyText:"Can drill tier 2 and secondary skills", 
-				sixtyText:"	Can drill tier 3 and 4 skills", 
-				ninetyText:"", 
-				hundredText:"Permanent + 5 luck while performing drill abilities",
+var demolition = {
+				idName: "demolition", 
+				displayName: "Demolition", 
+				allText:"Effectiveness of demolition-related actions.",
+				zeroText:"Can use torches as a siege melee weapon.", 
+				thirtyText:"More effective use of torches.", 
+				sixtyText:"", 
+				ninetyText:"Can man trebuchet", 
+				hundredText:"Can shoot with cows (just for fun)",
 				skillType:"Combat",
-				treeName:"drillTree",
-				imageSrc:"images/Drill.png",
-				disabledImageSrc:"images/Drill_u.png",
+				treeName:"demolitionTree",
+				imageSrc:"images/Demolition.png",
+				disabledImageSrc:"images/Demolition_u.png",
 				value:0
 			};
-
-
 //Minor Skills//
 var movement = {
 				idName: "movement", 
@@ -897,15 +797,15 @@ var swimming = {
 				hundredText:"",
 				skillType:"Minor",
 				treeName:"swimmingTree",
-				imageSrc:"images/Artisan.png",
-				disabledImageSrc:"images/Artisan_u.png",
+				imageSrc:"images/Swimming.png",
+				disabledImageSrc:"images/Swimming_u.png",
 				value:0
 			};
 var authority = {
 				idName: "authority", 
 				displayName: "Authority", 
-				allText:"Can claim land.<br><br>Can erect a Guild Monument.<br><br>Can mark trespassers as criminals.",
-				zeroText:"", 
+				allText:"Can claim land.",
+				zeroText:"Can erect a Guild Monument.<br><br>Can mark trespassers as criminals.",
 				thirtyText:"", 
 				sixtyText:"", 
 				ninetyText:"", 
@@ -963,4 +863,3 @@ var arts = {
 				disabledImageSrc:"images/Arts_u.png",
 				value:0
 			};
-			
