@@ -56,6 +56,7 @@
 		} );
 				
 	</script>
+<!-- The following has to do with the +/- buttons-->
 	<style type="text/css">
         .ui-spinner-input{
 			width: 32px;
@@ -69,7 +70,7 @@
 		}
      </style>
 </head>
-<body style='background:#222222'>
+<body style='background:#222222'><!--Background color -->
 <div style='margin:10px;width:752px;height:550px;float:left'>
 	<div id='tree' class='tree' style='border:1px solid black;width:100%;height:450px;overflow-y:auto;overflow-x:auto;float:left'>
 		<div id='artisanTree' class='tree' style='margin-left:auto;margin-right:auto;margin-top:20px;margin-bottom:20px;'>
@@ -93,10 +94,11 @@
 		</center>
 	</div>
 </div>
+<!-- The following is the skill section, can add hyperlinks here -->
 <div id='' style='float:right;margin:10px;width:350px'>
 	<table id='statblock' style='border:1px solid black;'>
 		<tr>
-			<td class='rowhead'><span id='SkillCapText' InfoTooltip='skillCap'>Skill Cap</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Skill_cap"><span id='SkillCapText' InfoTooltip='skillCap'>Skill Cap</span></a></td>
 			<td class='rowdata'><input type='number' id='statCap' name='statCap'  min="0" value='400' onchange="modifyCaps();"></td>
 		</tr>
 		<tr>
@@ -124,43 +126,43 @@
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='StrengthText' InfoTooltip='strength'>Strength</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Strength"><span id='StrengthText' InfoTooltip='strength'></a></span></td>
 			<td class='rowdata'>
 				<input style='text-align:center' type='number' id="strength" name="strength" value='10' min="10" max="110" onchange='modifyStr(this.value);'>
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='AgilityText' InfoTooltip='agility'>Agility</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Agility"><span id='AgilityText' InfoTooltip='agility'></a></span></td>
 			<td class='rowdata'>
 				<input style='text-align:center' type='number' id="agility" name="agility" value='10' min="10" max="110" onchange='modifyAgi(this.value);'>
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='ConstitutionText' InfoTooltip='constitution'>Constitution</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Constitution"><span id='ConstitutionText' InfoTooltip='constitution'></a></span></td>
 			<td class='rowdata'>
 				<input style='text-align:center' type='number' id="constitution" name="constitution" value='10' min="10" max="110" onchange='modifyCon(this.value);'>
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='IntelligenceText' InfoTooltip='intelligence'>Intelligence</span>&nbsp;&nbsp;<input type='checkbox' id='twoforone' onclick='modifyCaps();'><small><span id='TwoForOneText'>Stat Cap x2</span></small></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Intelligence"><span id='IntelligenceText' InfoTooltip='intelligence'></span></a>&nbsp;&nbsp;<input type='checkbox' id='twoforone' onclick='modifyCaps();' checked><small><span id='TwoForOneText'>Skill Cap Increase x2</span></small></td>
 			<td class='rowdata'>
 				<input style='text-align:center' type='number' id="intelligence" name="intelligence" value='10' min="10" max="110" onchange='modifyInt(this.value);'>
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='WillpowerText' InfoTooltip='willpower'>Willpower</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Willpower"><span id='WillpowerText' InfoTooltip='willpower'></a></span></td>
 			<td class='rowdata'>
 				<input style='text-align:center' type='number' id="willpower" name="willpower" value='10' min="10" max="110" onchange='modifyWill(this.value);'>
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='HitPointsText' InfoTooltip='hitPoints'>Hit Points</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Health"><span id='HitPointsText' InfoTooltip='hitPoints'></a></span></td>
 			<td class='rowdata'>
 				<span id='HP'>100</span>
 			</td>
 		</tr>
 		<tr>
-			<td class='rowhead'><span id='StaminaText' InfoTooltip='stamina'>Stamina</span></td>
+			<td class='rowhead'><a href="https://lifeisfeudal.gamepedia.com/Stamina"><span id='StaminaText' InfoTooltip='stamina'></a></span></td>
 			<td class='rowdata'>
 				<span id='Stam'>100</span>
 			</td>
@@ -188,7 +190,7 @@
 	</center>
 </div>
 <div class="popup" data-popup="popup-1">
-    <div class="popup-inner" style='text-align:center;font-family:arial;background:#444444'>
+    <div class="popup-inner" style='text-align:center;font-family:arial;background:#222222'><!--Change log popup color -->
         <center><span style='font-weight:bold' id='errorTxt'></span></center><br><br>
         <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
     </div>
@@ -199,6 +201,7 @@
 		<input style='text-align:center' class='spinner {{skillType}}' id="{{idName}}" name="{{idName}}" value='{{value}}' >
 	</a>	
 </script>
+<!--The following has to do with skill tooltips -->
 <script id='tooltip-template' type='text/x-handlebars-template'>
 	<table class='toolTip' border='1' style='border-collapse:collapse;border:1px solid black'>
 		<tr>
@@ -282,23 +285,24 @@
 </script>
 <script id='ChangeLog-template' type='text/x-handlebars-template'>
 	<div style='width:100%;overflow-x:auto;text-align:left;font-weight:normal;'>
-		<h2>Welcome to the Life is Feudal Skill Calculator</h2>
+		<font color= white><h2>Welcome to the Life is Feudal Skill Calculator</h2><!-- -->
 		The text boxes can be incremented and decremented using the keyboard if you prefer. <br>
 		- Up/Down move by one<br>
 		- PgUp/PgDn move by 10.<br><br>
 		
-		This is constantly under development. If you have suggestions please relay them to sollembas@gmail.com. I will try to response as quickly as possible. <br><br>
+		If you have suggestions please relay them to Aethaeran@gmail.com<br>I will try to respond as quickly as possible. <br><br>
 		
-		All information displayed is found in the Life is Feudal Wiki.<br>
+		All information displayed is found in the <b><a href="https://lifeisfeudal.gamepedia.com/Life_is_Feudal_Wiki">Life is Feudal Wiki.</a></b><br>
 		All code written by Nullsig<br>
+		Updated to current combat system, and recoloured by Aethaeran<br>
 		Chinese Translations courtesy of BoundlessHaung<br><br>
 		
 	
 		<h2>Change Log</h2>
-		<u><b>2017-01-08</b></u><br>
-		- Added translation option for popup windows<br><br>
-		- German Translations now live<br><br>
-		- Still looking for someone to help with the UI<br><br>
+		<u><b>2018-03-28</b></u><br>
+		- Updated to current combat system<br><br>
+		- Updated images and recoloured planner<br><br>
+		- Still looking for someone to help with the UI<br><br></font>
 	</div>
 </script>
 <script>		

@@ -435,8 +435,8 @@ function summaryAddRow(skillName, skillLevel, skillText){
 			break;
 	}
 
-	$('#summaryTable').append("<tr id='" + skillName + skillSort.toString() + "'><td valign='top' style='text-align:center'>"+skillName+"</td><td  valign='top' style='text-align:center'>"+skillLevel.toString()+"</td><td>" + skillText + "</td></tr>");
-}
+	$('#summaryTable').append("<tr id='" + skillName + skillSort.toString() + "'><td valign='top' style='text-align:center'><b><a href='https://lifeisfeudal.gamepedia.com/"+skillName+"'>"+skillName+"</a></b></td><td  valign='top' style='text-align:center'>"+skillLevel.toString()+"</td><td>" + skillText + "</td></tr>");
+}<!--This previous line is the summary table generation -->
 
 function summaryRemoveRow(skillName, skillLevel, skillText){
 	switch(skillLevel){

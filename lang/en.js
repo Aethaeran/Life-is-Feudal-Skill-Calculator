@@ -12,7 +12,7 @@ var HardTextVals = {
 					AgilityText: "Agility",
 					ConstitutionText: "Constitution",
 					IntelligenceText: "Intelligence",
-					TwoForOneText: "Stat Cap x2",
+					TwoForOneText: "Skill Cap Increase x2",
 					WillpowerText: "Willpower",
 					HitPointsText: "Hit Points",
 					StaminaText: "Stamina",
@@ -28,29 +28,29 @@ var HardTextVals = {
 				};
 
 var popupMessages = {
-					SkillCap: "You have exceeded skill cap. This skill has been set to the maximum possible. You need to remove points from your build elsewhere to continue investing in this skill.",
+					SkillCap: "You have exceeded skill cap.<br><br>This skill has been set to the maximum possible.<br><br>You need to remove points from your build elsewhere to continue investing in this skill.",
 					SkillHighest: "Skill values cannot exceed 100.",
 					SkillLowest: "Skill values cannot be below 0.",
 					UnlockParent30: "You cannot invest points in this until you have 30 points in ",
 					UnlockParent60: "You cannot invest more points in this until you have 60 points in ",
-					StatCapStr: "You have exceeded the 150 point stat cap. You will need to lower points in another attribute to continue raising Strength",
-					StatCapAgi: "You have exceeded the 150 point stat cap. You will need to lower points in another attribute to continue raising Agility",
-					StatCapConst: "You have exceeded the 150 point stat cap. You will need to lower points in another attribute to continue raising Constitution",
-					StatCapInt: "You have exceeded the 150 point stat cap. You will need to lower points in another attribute to continue raising Intelligence",
-					StatCapWill: "You have exceeded the 150 point stat cap. You will need to lower points in another attribute to continue raising Willpower",
+					StatCapStr: "You have exceeded the 150 point stat cap.<br><br>You will need to lower points in another attribute to continue raising Strength",
+					StatCapAgi: "You have exceeded the 150 point stat cap.<br><br>You will need to lower points in another attribute to continue raising Agility",
+					StatCapConst: "You have exceeded the 150 point stat cap.<br><br>You will need to lower points in another attribute to continue raising Constitution",
+					StatCapInt: "You have exceeded the 150 point stat cap.<br><br>You will need to lower points in another attribute to continue raising Intelligence",
+					StatCapWill: "You have exceeded the 150 point stat cap.<br><br>You will need to lower points in another attribute to continue raising Willpower",
 					StatMax: "110 is the maximum possible value for stats",
 					StatMin: "10 is the minimum possible value for stats",
 };
 var infotooltip = {
-                  skillCap: "Placeholder",
-                  strength: "Placeholder",
-                  agility: "Placeholder",
-                  constitution: "Placeholder",
-                  intelligence: "Placeholder",
-                  willpower: "Placeholder",
-                  hitPoints: "Placeholder",
-                  stamina: "Placeholder",
-                  carryWeight: "Placeholder",
+                  skillCap: "In Life is Feudal, the current Skill Cap is separated into three parts:<br>400 + 2*(Int-10) for Crafting skills<br>400 + 2*(Int-10) for Combat skills<br>400 + 2*(Int-10) for Minor skills",
+                  strength: "Strength (Str). Each point of strength determines effective equipment weight by 5 points. Affects Stamina spent when wielding weapons. Does <u>not</u> increase attack damage.",
+                  agility: "Agility (Agi). Each point of agility increases movement speed and accuracy by following formula (MaxAccuracy can be found in game files for each weapon)",
+                  constitution: "Constitution (Con). Each point of constitution awards +1 HP. Each point increases equipment capacity by 5 points.",
+                  intelligence: "Intellect (Int). Each point of intellect past 10 awards +2 skill cap (for Combat, Crafting, and Minor).",
+                  willpower: "Willpower (Will). Each point of willpower awards +1 Stamina, and base max carrying weight bonus by 2. ",
+                  hitPoints: "Health represents how much damage a player can take. When a players hHP hits zero, they die; If a players sHP hits zero, they fall unconscious.",
+                  stamina: "Stamina is used to fuel actions, and almost every action in LiF uses stamina.",
+                  carryWeight: "Raised by increasing Willpower. More specifically, you get 1 point of carrying weight at the .25 and .75 marks (ex: 50.25, 50.75, etc). On top of that, you can carry double your weight limit, so each point of willpower effectively gives you 4 carrying capacity.  Total carry weight with 109.75 Willpower is 320/640.",
 };
 /*Build out Nodes 
 
