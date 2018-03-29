@@ -12,7 +12,7 @@
     position:fixed;
     top:0px;
     left:0px;
-    /*background:rgba(0,0,0,0.75);*/
+    background:rgba(0,0,0,0.75);
 }
  
 /* Inner */
@@ -30,7 +30,7 @@
     background:#fff;
 }
  
-/* Close Button */
+/* Close Button on the change log popup*/
 .popup-close {
     width:30px;
     height:30px;
@@ -54,7 +54,7 @@
 .popup-close:hover {
     -webkit-transform:translate(50%, -50%) rotate(180deg);
     transform:translate(50%, -50%) rotate(180deg);
-    background:rgba(0,0,0,1);
+    background:rgba(100,0,0,1);
     text-decoration:none;
 }
 
@@ -66,6 +66,7 @@ table.toolTip{
 	font-size: .7em;
 }
 
+/*Save and load buttons*/
 .myButton {
 	-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
 	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
@@ -89,6 +90,7 @@ table.toolTip{
 	text-shadow:0px -1px 0px #7a2a1d;
 }
 
+/*Skill category buttons*/
 .btn {
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
@@ -109,6 +111,7 @@ table.toolTip{
   text-decoration: none;
 }
 
+/*Summary Table*/
 #summaryTable{
 	color:white;
 	font-family:arial;
@@ -128,7 +131,9 @@ table.toolTip{
 	font-size: .9em;
 }
 
+/*Skill tooltip quantity section*/
 td.skillChart{
+	background: #333333;
 	vertical-align: top;
 	text-align:center;
 	padding: 5px;
@@ -138,8 +143,9 @@ td,th{
 	padding: 5px;	
 }
 
+/*Skill tooltip  background section*/
 .ui-tooltip {
-	background:#4D422A;
+	background: #333333;
 	color: white;
 }
 
@@ -188,7 +194,6 @@ td.rowdata > input{
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 }
-
 .tree li {
 	float: left; text-align: center;
 	list-style-type: none;
@@ -264,7 +269,30 @@ right connector from last child*/
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
+} 
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
 }
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+    text-decoration: none;
+} 
 
 /* /*Time for some hover effects*/ */
 /* /*We will apply the hover effect the the lineage of the element also*/ */
