@@ -62,7 +62,7 @@
 			width: 32px;
 			text-align:right;
 			font-size: .8em;
-			height: 9px;
+			height: 32px;
 		}
 		
 		.ui-spinner-button{
@@ -196,10 +196,10 @@
     </div>
 </div>
 <script id='li-template' type='text/x-handlebars-template'><!--This is the image generator for skill trees -->
-	<a href='https://lifeisfeudal.gamepedia.com/{{displayName}}' target="_blank">
-		<img id='{{idName}}Image' src='{{disabledImageSrc}}' height="64" width="64"/></a><br>
+	<a href='#'>
+		<img id='{{idName}}Image' src='{{disabledImageSrc}}' height="64" width="64"/><br>
 		<input style='text-align:center' class='spinner {{skillType}}' id="{{idName}}" name="{{idName}}" value='{{value}}' >
-		
+	</a>
 </script>
 <!--The following has to do with skill tooltips -->
 <script id='tooltip-template' type='text/x-handlebars-template'>

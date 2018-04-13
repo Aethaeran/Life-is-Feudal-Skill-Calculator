@@ -70,7 +70,7 @@ All other values should not change
 var artisan = {
 				idName: "artisan", 
 				displayName: "Artisan", 
-				allText:"Terraforming speed. Tree cutting speed.", 
+				allText:"<a href='https://lifeisfeudal.gamepedia.com/Terraforming'>Terraforming</a> speed. Tree cutting speed.", 
 				zeroText:"Can raise and lower the level of terrain.<br><br>Can strip bark and cut down trees.<br><br>Can create a camp.<br><br>Can create a primitive tools.<br><br>Can hew stones for construction.", 
 				thirtyText:"Can flatten the terrain.<br><br>Can uproot stumps.", 
 				sixtyText:"Can cut down hardwood trees twice as fast.", 

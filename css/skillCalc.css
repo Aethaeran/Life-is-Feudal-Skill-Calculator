@@ -101,13 +101,14 @@ table.toolTip{
   font-family: Arial;
   color: #ffffff;
   font-size: 20px;
-  background: #B54B3A;
+  background: black;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
 
+/*Skill category buttons Colors*/
 .btn:hover {
-  background: #9C2B28;
+  background: black;
   text-decoration: none;
 }
 
@@ -181,9 +182,10 @@ td.rowdata > input{
 }
 
 .tree{
+  width: calc(100% / 8);  
   margin-left:auto;
   margin-right:auto;
-  width:752px;
+  width:749px;
 }
 
 
@@ -210,12 +212,12 @@ td.rowdata > input{
 .tree li::before, .tree li::after{
 	content: '';
 	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #ccc;
+	border-top: 3px solid #ccc;
 	width: 50%; height: 20px;
 }
 .tree li::after{
 	right: auto; left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 3px solid #ccc;
 }
 
 /*We need to remove left-right connectors from elements without 
@@ -234,7 +236,7 @@ right connector from last child*/
 }
 /*Adding back the vertical connector to the last nodes*/
 .tree li:last-child::before{
-	border-right: 1px solid #ccc;
+	border-right: 3px solid #ccc;
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
@@ -249,7 +251,7 @@ right connector from last child*/
 .tree ul ul::before{
 	content: '';
 	position: absolute; top: 0; left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 3px solid #ccc;
 	width: 0; height: 20px;
 }
 
@@ -284,14 +286,14 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-    color: blue;
+    color: orange;
     text-decoration: none;
 }
 
 /* selected link */
 a:active {
-    color: blue;
-    text-decoration: none;
+    color: orange;
+    text-decoration: underline;
 } 
 
 /* /*Time for some hover effects*/ */

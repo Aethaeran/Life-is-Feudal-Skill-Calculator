@@ -53,18 +53,6 @@ function loadCombat(){
 	$('#demolitionImage').attr('src',demolition.imageSrc);
 	
 	//center the divs
-	var newWidth = parseInt($('#cavalryTree > ul > li').css("width")) + parseInt($('#cavalryTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#cavalryTree').css('width',newWidth);
-	var newWidth = parseInt($('#militiaTree > ul > li').css("width")) + parseInt($('#militiaTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#militiaTree').css('width',newWidth);
-	var newWidth = parseInt($('#footmanTree > ul > li').css("width")) + parseInt($('#footmanTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#footmanTree').css('width',newWidth);
-	var newWidth = parseInt($('#assaulterTree > ul > li').css("width")) + parseInt($('#assaulterTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#assaulterTree').css('width',newWidth);
-	var newWidth = parseInt($('#equipmentMaintainTree > ul > li').css("width")) + parseInt($('#equipmentMaintainTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#equipmentMaintainTree').css('width',newWidth);
-	var newWidth = parseInt($('#demolitionTree > ul > li').css("width")) + parseInt($('#demolitionTree > ul > li').css("padding-left")) * 2 + 1;
-	$('#demolitionTree').css('width',newWidth);
 }
 
 function loadMinor(){
@@ -219,7 +207,7 @@ function checkChild(skillName,value){
 			if(childValue > 29){
 				$('#'+skillName)[0].value = 60;
 				value=60;
-				handlePopup('You cannot decrease this skill until you have less than 29 points in ' + currentNode.data.displayName);
+				handlePopup('You cannot decrease this skill until you have less than 29 points in ' + currentNode.child.displayName);
 			}
 		});
 	}
